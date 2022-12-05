@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_sky"
+    tools:context=".QuizActivity">
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="218dp"
+        android:layout_height="79dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Start"
+        android:fontFamily="@font/kids_magazine"
+        android:textColor="#FFFFFF"
+        android:padding="10sp"
+        android:shadowColor="#d7713200"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <ProgressBar
+        android:id="@+id/prog_timer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="30"
+        android:progress="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/kids_magazine"
+        android:textColor="#FFFFFF"
+        android:padding="10sp"
+        android:shadowColor="#d7713200"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="3"
+        android:text="TEXTVIEW"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prog_timer" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/kids_magazine"
+        android:textColor="#FFFFFF"
+        android:padding="10sp"
+        android:shadowColor="#d7713200"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="3"
+        android:text="TEXTVIEW"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prog_timer" />
+
+    <TextView
+        android:id="@+id/tv_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/kids_magazine"
+        android:textColor="#FFC300"
+        android:padding="10sp"
+        android:shadowColor="#d7713200"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="3"
+        android:text="TEXTVIEW"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_score"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toEndOf="@+id/tv_timer"
+        app:layout_constraintTop_toTopOf="@+id/prog_timer"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_answer0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="1"
+                android:height="150dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Button"
+                android:fontFamily="@font/kids_magazine"/>
+
+            <Button
+                android:id="@+id/btn_answer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:height="150dp"
+                android:backgroundTint="@color/purple_500"
+                android:text="Button"
+                android:fontFamily="@font/kids_magazine"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_answer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="1"
+                android:height="150dp"
+                android:backgroundTint="@color/purple_200"
+                android:text="Button"
+                android:fontFamily="@font/kids_magazine"/>
+
+            <Button
+                android:id="@+id/btn_answer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:height="150dp"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:text="Button"
+                android:fontFamily="@font/kids_magazine"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_bottommessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kids_magazine"
+        android:textColor="#FFFFFF"
+        android:padding="10sp"
+        android:shadowColor="#d7713200"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="3"
+        android:text="TEXTVIEW"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
